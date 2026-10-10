@@ -504,3 +504,15 @@ section[id] {
         transition-duration: 0.01ms !important;
     }
 }
+.skills-group {
+    margin-top: 28px;
+}
+
+.skills-group h3 {
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+}
+
+.skills-group .skills-list {
+    margin-bottom: 0;
+}
