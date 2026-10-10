@@ -1,11 +1,17 @@
 
-/* 1. Variables globales: tema oscuro tecnológico */
+/* =========================================================
+   1. VARIABLES GLOBALES — TEMA OSCURO TECNOLÓGICO
+   ========================================================= */
 :root {
+    color-scheme: dark;
+
     --color-bg: #0B0F19;
     --color-surface: #151C2C;
+    --color-surface-hover: #1B263A;
     --color-text: #F1F5F9;
     --color-muted: #A7B2C5;
     --color-primary: #3B82F6;
+    --color-primary-hover: #60A5FA;
     --color-border: #273449;
 
     --font-main: system-ui, -apple-system, BlinkMacSystemFont,
@@ -14,4 +20,487 @@
     --container-width: 1100px;
     --radius: 12px;
     --shadow: 0 12px 35px rgb(0 0 0 / 25%);
+    --transition: 220ms ease;
+}
+
+/* =========================================================
+   2. REINICIO Y ESTILOS GENERALES
+   ========================================================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    color: var(--color-text);
+    background: var(--color-bg);
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: var(--color-primary);
+    text-underline-offset: 4px;
+    transition:
+        color var(--transition),
+        background-color var(--transition),
+        border-color var(--transition);
+}
+
+a:hover {
+    color: var(--color-primary-hover);
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 4px;
+}
+
+::selection {
+    color: #ffffff;
+    background: #2563eb;
+}
+
+/* =========================================================
+   3. CONTENEDOR, SECCIONES Y TIPOGRAFÍA
+   ========================================================= */
+.container {
+    width: min(
+        var(--container-width),
+        calc(100% - 40px)
+    );
+    margin-inline: auto;
+}
+
+.section {
+    padding-block: 88px;
+}
+
+.section-muted {
+    background: var(--color-surface);
+    border-block: 1px solid rgb(39 52 73 / 55%);
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--color-text);
+    line-height: 1.2;
+}
+
+h1 {
+    max-width: 850px;
+    margin-bottom: 24px;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -0.055em;
+}
+
+h2 {
+    margin-bottom: 28px;
+    font-size: clamp(1.9rem, 4vw, 2.7rem);
+    font-weight: 750;
+    letter-spacing: -0.035em;
+}
+
+h3 {
+    margin-bottom: 14px;
+    font-size: 1.45rem;
+}
+
+p {
+    color: var(--color-muted);
+}
+
+section[id] {
+    scroll-margin-top: 90px;
+}
+
+/* =========================================================
+   4. CABECERA Y NAVEGACIÓN
+   ========================================================= */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgb(11 15 25 / 88%);
+    border-bottom: 1px solid var(--color-border);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    color: var(--color-text);
+    font-size: 1.2rem;
+    font-weight: 850;
+    letter-spacing: -0.04em;
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: var(--color-primary-hover);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+    font-weight: 550;
+    text-decoration: none;
+}
+
+.nav-menu a:hover {
+    color: var(--color-primary-hover);
+}
+
+.menu-toggle {
+    display: none;
+    color: var(--color-text);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* =========================================================
+   5. PRESENTACIÓN PRINCIPAL
+   ========================================================= */
+.hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding-block: 135px 125px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    width: min(800px, 100%);
+    height: 480px;
+    transform: translateX(-50%);
+    background: radial-gradient(
+        ellipse at center,
+        rgb(59 130 246 / 15%) 0%,
+        rgb(59 130 246 / 5%) 42%,
+        transparent 72%
+    );
+    pointer-events: none;
+}
+
+.eyebrow {
+    margin-bottom: 18px;
+    color: var(--color-primary-hover);
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+}
+
+.hero-description {
+    max-width: 680px;
+    margin-bottom: 0;
+    font-size: clamp(1.05rem, 2vw, 1.2rem);
+    line-height: 1.85;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 34px;
+}
+
+/* =========================================================
+   6. BOTONES
+   ========================================================= */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 11px 22px;
+    border: 1px solid transparent;
+    border-radius: var(--radius);
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        transform var(--transition),
+        background-color var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-primary {
+    color: #ffffff;
+    background: var(--color-primary);
+    box-shadow: 0 6px 20px rgb(59 130 246 / 20%);
+}
+
+.button-primary:hover {
+    color: #ffffff;
+    background: #2563eb;
+    box-shadow: 0 8px 26px rgb(59 130 246 / 30%);
+}
+
+.button-secondary {
+    color: var(--color-text);
+    background: rgb(21 28 44 / 75%);
+    border-color: var(--color-border);
+}
+
+.button-secondary:hover {
+    color: #ffffff;
+    background: var(--color-surface-hover);
+    border-color: var(--color-primary);
+}
+
+/* =========================================================
+   7. HABILIDADES
+   ========================================================= */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skills-list li {
+    padding: 9px 16px;
+    color: var(--color-text);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    font-size: 0.95rem;
+    transition:
+        border-color var(--transition),
+        background-color var(--transition),
+        transform var(--transition);
+}
+
+.skills-list li:hover {
+    transform: translateY(-2px);
+    background: var(--color-surface-hover);
+    border-color: var(--color-primary);
+}
+
+/* =========================================================
+   8. TARJETAS DE PROYECTOS
+   ========================================================= */
+.project-card {
+    max-width: 760px;
+    padding: 32px;
+    background: linear-gradient(
+        145deg,
+        rgb(21 28 44 / 95%),
+        rgb(15 22 35 / 95%)
+    );
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-primary);
+    box-shadow: 0 18px 42px rgb(0 0 0 / 35%);
+}
+
+.project-content > p:not(.eyebrow):not(.project-tech) {
+    line-height: 1.8;
+}
+
+.project-tech {
+    margin-block: 20px;
+    color: var(--color-primary-hover);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.project-card a:not(.button) {
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.project-card a:not(.button)::after {
+    content: " →";
+    transition: margin-left var(--transition);
+}
+
+.project-card a:not(.button):hover::after {
+    margin-left: 5px;
+}
+
+/* =========================================================
+   9. CONTACTO
+   ========================================================= */
+#contacto p {
+    max-width: 650px;
+}
+
+#contacto .button {
+    margin-top: 8px;
+}
+
+/* =========================================================
+   10. PIE DE PÁGINA
+   ========================================================= */
+.site-footer {
+    padding-block: 30px;
+    background: var(--color-bg);
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* =========================================================
+   11. ADAPTACIÓN PARA TABLET Y MÓVIL
+   ========================================================= */
+@media (max-width: 700px) {
+    html {
+        scroll-padding-top: 75px;
+    }
+
+    .container {
+        width: calc(100% - 32px);
+    }
+
+    .section {
+        padding-block: 62px;
+    }
+
+    .hero {
+        padding-block: 88px 78px;
+    }
+
+    .hero::before {
+        height: 360px;
+    }
+
+    .navbar {
+        min-height: 68px;
+        flex-wrap: wrap;
+        padding-block: 10px;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40px;
+        padding: 8px 13px;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding-block: 8px;
+        border-top: 1px solid var(--color-border);
+    }
+
+    .nav-menu.is-open {
+        display: flex;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 12px 4px;
+    }
+
+    .hero-actions {
+        align-items: stretch;
+    }
+
+    .hero-actions .button {
+        flex: 1 1 180px;
+    }
+
+    .project-card {
+        padding: 23px;
+    }
+}
+
+/* =========================================================
+   12. ACCESIBILIDAD: MOVIMIENTO REDUCIDO
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
