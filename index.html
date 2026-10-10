@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Portafolio de desarrollo web. Sistemas de inventario,
+        ventas y aplicaciones web con Django y PostgreSQL."
+    >
+
+    <meta name="theme-color" content="#111827">
+
+    <title>Mi Portafolio | Desarrollador Web</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="container navbar" aria-label="Navegación principal">
+            <a class="logo" href="#inicio">MiPortafolio</a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="nav-menu"
+                aria-label="Abrir menú"
+            >
+                Menú
+            </button>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero section" id="inicio">
+            <div class="container">
+                <p class="eyebrow">Desarrollo web</p>
+
+                <h1>Desarrollo sistemas web para negocios</h1>
+
+                <p class="hero-description">
+                    Creo aplicaciones web para gestionar información,
+                    inventarios, ventas y procesos empresariales.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#proyectos">
+                        Ver proyectos
+                    </a>
+
+                    <a class="button button-secondary" href="#contacto">
+                        Contactarme
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="sobre-mi">
+            <div class="container">
+                <h2>Sobre mí</h2>
+
+                <p>
+                    Soy desarrollador web enfocado en construir sistemas
+                    prácticos, organizados y fáciles de utilizar.
+                </p>
+            </div>
+        </section>
+
+        <section class="section section-muted" id="habilidades">
+            <div class="container">
+                <h2>Habilidades técnicas</h2>
+
+                <ul class="skills-list">
+                    <li>Python</li>
+                    <li>Django</li>
+                    <li>JavaScript</li>
+                    <li>HTML5 y CSS3</li>
+                    <li>React</li>
+                    <li>PostgreSQL</li>
+                    <li>Git y GitHub</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" id="proyectos">
+            <div class="container">
+                <h2>Proyectos destacados</h2>
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <p class="eyebrow">Proyecto de portafolio</p>
+
+                        <h3>StockFlow</h3>
+
+                        <p>
+                            Sistema de inventario y ventas para gestionar
+                            productos, movimientos de mercancía, usuarios
+                            y reportes.
+                        </p>
+
+                        <p class="project-tech">
+                            Django · React · PostgreSQL
+                        </p>
+
+                        <a href="projects/stockflow.html">
+                            Conocer el proyecto
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section-muted" id="contacto">
+            <div class="container">
+                <h2>¿Tienes un proyecto?</h2>
+
+                <p>
+                    Puedes contactarme para conversar sobre tu necesidad.
+                </p>
+
+                <a
+                    class="button button-primary"
+                    href="mailto:tu-correo@ejemplo.com"
+                >
+                    Enviar correo
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                © <span id="current-year"></span> MiPortafolio.
+                Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
