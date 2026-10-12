@@ -3,283 +3,349 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta
         name="description"
-        content="Portafolio profesional de  Ruben Mamani Tito, Licenciado en Ingeniería de Sistemas y desarrollador web y de sistemas empresariales en La Paz, Bolivia."
+        content="Portafolio de Pedro Perez Pereira, Licenciado en Ingeniería de Sistemas y desarrollador web y de sistemas empresariales en La Paz, Bolivia."
     >
 
-    <meta name="theme-color" content="#0B0F19">
-
-    <title>Ruben Mamani Tito | Desarrollador Web</title>
+    <meta name="theme-color" content="#080d19">
+    <title>Pedro Perez Pereira — Desarrollador Web</title>
 
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/main.js" defer></script>
 </head>
 
 <body>
-    <!-- Cabecera y navegación -->
     <header class="site-header">
         <nav class="container navbar" aria-label="Navegación principal">
-            <a class="logo" href="#inicio">Ruben Mamani Tito</a>
+            <a class="logo" href="#inicio">Pedro Perez Pereira</a>
 
             <button
                 class="menu-toggle"
                 type="button"
                 aria-expanded="false"
                 aria-controls="nav-menu"
-                aria-label="Abrir menú"
+                aria-label="Abrir o cerrar el menú"
             >
                 Menú
             </button>
 
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#formacion">Formación</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
+
+            <div class="social-links">
+                <a
+                    href="mailto:pedroperespereira@gmail.com"
+                    aria-label="Enviar correo"
+                    title="Correo"
+                >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="14" rx="2"/>
+                        <path d="m4 7 8 6 8-6"/>
+                    </svg>
+                </a>
+
+                <a
+                    href="https://github.com/rubenmt-dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Perfil de GitHub"
+                    title="GitHub"
+                >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-.9-2.7c3-.3 6.1-1.5 6.1-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6S17.5 1.2 15 3.2a13 13 0 0 0-7 0C5.5 1.2 3.3 2.5 3.3 2.5a4.8 4.8 0 0 0-.1 3.6 5.2 5.2 0 0 0-1.4 3.6c0 5.2 3.1 6.4 6.1 6.7a3.4 3.4 0 0 0-.9 2.7V22"/>
+                    </svg>
+                </a>
+            </div>
         </nav>
     </header>
 
     <main>
-        <!-- Presentación principal -->
-        <section class="hero section" id="inicio">
-            <div class="container">
-                <p class="eyebrow">
-                    Desarrollo web · Sistemas empresariales
-                </p>
+        <!-- Presentación -->
+        <section class="hero" id="inicio">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <div class="availability">
+                        <span class="availability-dot">✧</span>
+                        Desarrollo web · Sistemas empresariales
+                    </div>
 
-                <h2>
-                    Ruben Mamani Tito
-                </h2>
+                    <h1>
+                        Desarrollo de sistemas web
+                        <span>claros, útiles y funcionales.</span>
+                    </h1>
 
-                <h2>
-                    Desarrollador web y de sistemas empresariales
-                </h2>
+                    <p class="hero-description">
+                        Soy Pedro Perez Pereira, desarrollador web y de
+                        sistemas empresariales. Construyo proyectos
+                        académicos y personales utilizando tecnologías
+                        web, bases de datos y herramientas de despliegue.
+                    </p>
 
-                <p class="hero-description">
-                    Licenciado en Ingeniería de Sistemas, enfocado en
-                    el desarrollo de aplicaciones web y sistemas
-                    empresariales para organizar información,
-                    optimizar procesos y facilitar la gestión
-                    de los negocios.
-                </p>
+                    <p class="hero-location">
+                        La Paz, Bolivia · Licenciado en Ingeniería de Sistemas
+                    </p>
 
-                <p class="hero-description">
-                    <span aria-label="Ubicación">📍</span>
-                    La Paz, Bolivia
-                </p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#proyectos">
+                            Ver proyectos <span aria-hidden="true">→</span>
+                        </a>
 
-                <div class="hero-actions">
-                    <a class="button button-primary" href="#proyectos">
-                        Ver mis proyectos
-                    </a>
-
-                    <a class="button button-secondary" href="#contacto">
-                        Contactarme
-                    </a>
+                        <a class="button button-secondary" href="#contacto">
+                            Contacto
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Sobre mí -->
-        <section class="section" id="sobre-mi">
-            <div class="container">
-                <h2>Sobre mí</h2>
+                <aside class="focus-card">
+                    <h2>Áreas de enfoque</h2>
 
-                <p>
-                    Soy Licenciado en Ingeniería de Sistemas y me
-                    interesa el desarrollo de soluciones de software
-                    orientadas a necesidades reales. Trabajo en
-                    proyectos académicos y personales que me permiten
-                    aplicar conocimientos de programación, bases de
-                    datos, desarrollo de interfaces y despliegue web.
-                </p>
-
-                <p>
-                    Mi enfoque está en construir sistemas organizados,
-                    funcionales y mantenibles, prestando atención tanto
-                    a la lógica de negocio como a la experiencia de uso.
-                </p>
-            </div>
-        </section>
-
-        <!-- Habilidades técnicas -->
-        <section class="section section-muted" id="habilidades">
-            <div class="container">
-                <h2>Habilidades técnicas</h2>
-
-                <p>
-                    Tecnologías utilizadas en mis proyectos de
-                    desarrollo y aprendizaje.
-                </p>
-
-                <div class="skills-group">
-                    <h3>Backend y desarrollo de API</h3>
-
-                    <ul class="skills-list">
-                        <li>Python</li>
-                        <li>Django</li>
-                        <li>Django REST Framework (DRF)</li>
+                    <ul class="focus-list">
+                        <li>Desarrollo de sistemas empresariales</li>
+                        <li>Aplicaciones web con Django</li>
+                        <li>Gestión de datos con PostgreSQL</li>
+                        <li>Interfaces web y aplicaciones móviles</li>
+                        <li>Despliegue de aplicaciones web</li>
                     </ul>
-                </div>
-
-                <div class="skills-group">
-                    <h3>Frontend</h3>
-
-                    <ul class="skills-list">
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
-                        <li>Bootstrap</li>
-                    </ul>
-                </div>
-
-                <div class="skills-group">
-                    <h3>Bases de datos</h3>
-
-                    <ul class="skills-list">
-                        <li>PostgreSQL</li>
-                    </ul>
-                </div>
-
-                <div class="skills-group">
-                    <h3>Aplicaciones móviles</h3>
-
-                    <ul class="skills-list">
-                        <li>React Native</li>
-                        <li>Expo</li>
-                    </ul>
-                </div>
-
-                <div class="skills-group">
-                    <h3>Herramientas y despliegue</h3>
-
-                    <ul class="skills-list">
-                        <li>Git</li>
-                        <li>GitHub</li>
-                        <li>Linux</li>
-                        <li>Nginx</li>
-                        <li>Gunicorn</li>
-                    </ul>
-                </div>
+                </aside>
             </div>
         </section>
 
         <!-- Proyectos -->
         <section class="section" id="proyectos">
             <div class="container">
-                <h2>Proyectos</h2>
+                <div class="section-heading">
+                    <h2>Proyectos destacados</h2>
+                    <p>
+                        Proyectos académicos y personales en los que
+                        aplico mis conocimientos de desarrollo de
+                        software y tecnologías web.
+                    </p>
+                </div>
 
-                <p>
-                    Una selección de proyectos académicos y personales
-                    en los que aplico mis conocimientos de desarrollo
-                    de software.
-                </p>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-top">
+                            <h3>Sistema de Seguimiento de Tesis</h3>
+                            <a
+                                class="project-arrow"
+                                href="https://github.com/rubenmt-dev"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Ver perfil de GitHub"
+                                title="Ver GitHub"
+                            >↗</a>
+                        </div>
 
-                <article class="project-card">
-                    <div class="project-content">
-                        <p class="eyebrow">Proyecto destacado</p>
-
-                        <h3>StockFlow</h3>
-
-                        <p>
-                            Proyecto de sistema web. En esta sección
-                            se describirán sus objetivos, las funciones
-                            implementadas y el problema que busca
-                            resolver.
+                        <p class="project-description">
+                            Sistema para apoyar el seguimiento del proceso
+                            de tesis de maestría, con gestión de información,
+                            cronogramas, formularios y notificaciones.
                         </p>
 
-                        <p class="project-tech">
-                            Tecnologías: Django · PostgreSQL · Bootstrap
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>PostgreSQL</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-top">
+                            <h3>StockFlow</h3>
+                            <a
+                                class="project-arrow"
+                                href="projects/stockflow.html"
+                                aria-label="Conocer el proyecto StockFlow"
+                                title="Conocer StockFlow"
+                            >↗</a>
+                        </div>
+
+                        <p class="project-description">
+                            Proyecto de sistema web relacionado con la
+                            gestión de inventarios. La descripción detallada
+                            se completará con las funciones implementadas
+                            en el proyecto.
                         </p>
 
-                        <a href="projects/stockflow.html">
-                            Conocer el proyecto
-                        </a>
-                    </div>
-                </article>
+                        <div class="project-tags">
+                            <span>Django</span>
+                            <span>PostgreSQL</span>
+                            <span>Bootstrap</span>
+                        </div>
+                    </article>
 
-                <!-- Puedes añadir más proyectos aquí cuando estén listos. -->
+                    <article class="project-card">
+                        <div class="project-top">
+                            <h3>Calculadora Android</h3>
+                            <a
+                                class="project-arrow"
+                                href="https://github.com/rubenmt-dev"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Ver proyectos en GitHub"
+                                title="Ver GitHub"
+                            >↗</a>
+                        </div>
+
+                        <p class="project-description">
+                            Proyecto de aplicación móvil desarrollado
+                            con React Native y Expo, enfocado en la
+                            interfaz de una calculadora y su lógica
+                            de operaciones.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>React Native</span>
+                            <span>Expo</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <!-- Formación académica -->
-        <section class="section section-muted" id="formacion">
+        <!-- Experiencia y formación -->
+        <section class="section section-alt" id="experiencia">
             <div class="container">
-                <h2>Formación académica</h2>
+                <div class="section-heading">
+                    <h2>Experiencia y formación</h2>
+                    <p>
+                        Mi formación y el trabajo práctico realizado
+                        mediante proyectos académicos y personales.
+                    </p>
+                </div>
 
-                <article class="project-card">
-                    <div class="project-content">
-                        <p class="eyebrow">Formación profesional</p>
-
-                        <h3>
-                            Licenciado en Ingeniería de Sistemas
-                        </h3>
-
+                <div class="details-grid">
+                    <article class="detail-card">
+                        <p class="detail-label">Experiencia práctica</p>
+                        <h3>Proyectos académicos y personales</h3>
                         <p>
-                            Formación académica en el área de
-                            Ingeniería de Sistemas.
+                            Desarrollo de sistemas y aplicaciones para
+                            aplicar conocimientos de programación,
+                            bases de datos, interfaces y despliegue web.
                         </p>
+                    </article>
+
+                    <article class="detail-card">
+                        <p class="detail-label">Formación académica</p>
+                        <h3>Licenciado en Ingeniería de Sistemas</h3>
+                        <p>
+                            Formación en el área de Ingeniería de Sistemas.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tecnologías -->
+        <section class="section" id="habilidades">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Tecnologías</h2>
+                    <p>
+                        Herramientas y tecnologías utilizadas en mis
+                        proyectos de desarrollo.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <h3>Backend y API</h3>
+                        <div class="skill-tags">
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>Django REST Framework</span>
+                        </div>
                     </div>
-                </article>
+
+                    <div class="skill-group">
+                        <h3>Frontend</h3>
+                        <div class="skill-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3>Bases de datos</h3>
+                        <div class="skill-tags">
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3>Aplicaciones móviles</h3>
+                        <div class="skill-tags">
+                            <span>React Native</span>
+                            <span>Expo</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3>Control de versiones</h3>
+                        <div class="skill-tags">
+                            <span>Git</span>
+                            <span>GitHub</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3>Linux y despliegue web</h3>
+                        <div class="skill-tags">
+                            <span>Linux</span>
+                            <span>Nginx</span>
+                            <span>Gunicorn</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Contacto -->
-        <section class="section" id="contacto">
+        <section class="section section-alt" id="contacto">
             <div class="container">
-                <h2>Contacto</h2>
+                <div class="contact-panel">
+                    <div>
+                        <h2>Hablemos de tu proyecto</h2>
+                        <p>
+                            Para consultas y propuestas de colaboración,
+                            puedes contactarme por correo electrónico.
+                        </p>
+                    </div>
 
-                <p>
-                    Estoy abierto a conectar con profesionales,
-                    conversar sobre proyectos de software y explorar
-                    oportunidades de colaboración.
-                </p>
-
-                <div class="hero-actions">
                     <a
                         class="button button-primary"
-                        href="mailto:rubenmamanititoo@gmail.com"
+                        href="mailto:pedroperespereira@gmail.com"
                     >
-                        Enviar correo
-                    </a>
-
-                    <a
-                        class="button button-secondary"
-                        href="https://github.com/rubenmt-dev"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Ver GitHub
+                        Enviar correo <span aria-hidden="true">→</span>
                     </a>
                 </div>
-
-                <p>
-                    <strong>Correo:</strong>
-                    <a href="mailto:rubenmamanititoo@gmail.com">
-                        rubenmamanititoo@gmail.com
-                    </a>
-                </p>
-
-                <p>
-                    <strong>Ubicación:</strong> La Paz, Bolivia
-                </p>
             </div>
         </section>
     </main>
 
-    <!-- Pie de página -->
     <footer class="site-footer">
-        <div class="container">
+        <div class="container footer-content">
             <p>
-                © <span id="current-year"></span>
-                Ruben Mamani Tito.
-                Todos los derechos reservados.
+                © <span id="current-year"></span> Pedro Perez Pereira
             </p>
+
+            <a
+                href="https://github.com/rubenmt-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub ↗
+            </a>
         </div>
     </footer>
 </body>

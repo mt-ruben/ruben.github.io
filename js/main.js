@@ -1,6 +1,4 @@
-"use strict";
 
-// Menú de navegación para dispositivos móviles
 const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector("#nav-menu");
 
@@ -11,25 +9,20 @@ if (menuToggle && navMenu) {
         menuToggle.setAttribute("aria-expanded", String(isOpen));
         menuToggle.setAttribute(
             "aria-label",
-            isOpen ? "Cerrar menú" : "Abrir menú"
+            isOpen ? "Cerrar menú" : "Abrir o cerrar el menú"
         );
-        menuToggle.textContent = isOpen ? "Cerrar" : "Menú";
     });
 
-    // Cerrar el menú después de seleccionar una sección
-    navMenu.querySelectorAll('a[href^="#"]').forEach((link) => {
+    navMenu.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", () => {
             navMenu.classList.remove("is-open");
             menuToggle.setAttribute("aria-expanded", "false");
-            menuToggle.setAttribute("aria-label", "Abrir menú");
-            menuToggle.textContent = "Menú";
         });
     });
 }
 
-// Año automático del pie de página
-const currentYear = document.querySelector("#current-year");
+const yearElement = document.querySelector("#current-year");
 
-if (currentYear) {
-    currentYear.textContent = new Date().getFullYear();
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
 }
