@@ -89,6 +89,8 @@ button:focus-visible {
     white-space: nowrap;
 }
 
+
+
 .logo::before {
     content: "";
     width: 9px;
@@ -96,8 +98,30 @@ button:focus-visible {
     flex-shrink: 0;
     border-radius: 50%;
     background: var(--primary);
-    box-shadow: 0 0 14px rgb(56 169 245 / 75%);
+    box-shadow: 0 0 6px rgb(56 169 245 / 25%);
+    animation: firefly-glow 3s ease-in-out infinite;
 }
+
+@keyframes firefly-glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgb(56 169 245 / 25%);
+    }
+
+    50% {
+        box-shadow:
+            0 0 8px rgb(56 169 245 / 55%),
+            0 0 16px rgb(56 169 245 / 25%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logo::before {
+        animation: none;
+        box-shadow: 0 0 7px rgb(56 169 245 / 35%);
+    }
+}
+
+
 
 .nav-menu {
     display: flex;
