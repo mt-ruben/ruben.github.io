@@ -430,7 +430,7 @@ button:focus-visible {
     flex-shrink: 0;
     border: 1px solid var(--border);
     border-radius: 50%;
-    color: #cbd8e9;
+    color: #0b1425;
     font-size: 18px;
     transition:
         background 180ms ease,
